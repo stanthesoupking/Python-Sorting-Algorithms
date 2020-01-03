@@ -16,7 +16,7 @@ def sort(values):
             max_value = x
 
     # Create buckets
-    bucket_depth = math.ceil(math.log10(max_value))
+    bucket_depth = math.ceil(math.log10(max_value) + 0.1)
     buckets = []
     for i in range(0, bucket_depth):
         buckets.append([[] for x in range(0,10)])
