@@ -26,7 +26,8 @@ parser.add_argument('--output', type=str,
                     help='file to write sorted values into')
 parser.add_argument('--time', const=True, nargs='?',
                     help='time the chosen sorting algorithm')
-
+parser.add_argument('--radix-buckets',  type=int,
+                    help='the number of buckets to be used in each pass of radix sort')
 # Parse arguments
 args = parser.parse_args()
 
@@ -76,7 +77,10 @@ if args.time:
     start_time = time.time()
 
 # Sort
-sorted_values = available_algs[alg](values)
+if alg == 'RADIX' and args.radix_buckets != None:
+    sorted_values = available_algs[alg](values, args.radix_buckets)
+else:
+    sorted_values = available_algs[alg](values)
 
 # Get elapsed time
 if args.time:
