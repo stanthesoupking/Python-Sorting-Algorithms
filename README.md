@@ -10,6 +10,8 @@ python main.py
 
 The full list of available options is as follows:
 ```
+usage: main.py [-h] [--algorithm ALGORITHM] [--input INPUT] [--output OUTPUT] [--time [TIME]] [--radix-buckets RADIX_BUCKETS]
+
 Python Sorting Algorithms
 
 optional arguments:
@@ -19,4 +21,6 @@ optional arguments:
   --input INPUT         input file to sort
   --output OUTPUT       file to write sorted values into
   --time [TIME]         time the chosen sorting algorithm
+  --radix-buckets RADIX_BUCKETS
+                        the number of buckets to be used in each pass of radix sort
 ```
