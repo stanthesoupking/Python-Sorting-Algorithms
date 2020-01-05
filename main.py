@@ -7,13 +7,14 @@ Algorithms are written in Python 3 and were tested using version 3.8.1.
 
 import argparse
 import time
-import insertion_sort, selection_sort, radix_sort
+import insertion_sort, selection_sort, bubble_sort, radix_sort
 
 # Mapped algorithm name to sort function
 # Note: Algorithm names must be in upper-case
 available_algs = {
     'INSERTION': insertion_sort.sort,
     'SELECTION': selection_sort.sort,
+    'BUBBLE': bubble_sort.sort,
     'RADIX': radix_sort.sort
 }
 
