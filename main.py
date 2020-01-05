@@ -86,7 +86,7 @@ else:
 # Get elapsed time
 if args.time:
     elapsed = time.time() - start_time
-    print(f'{elapsed:.2f} seconds elapsed.')
+    print(f'{elapsed * 1000:.2f} milliseconds elapsed.')
 
 # Write output to file
 with open(output_path, 'w') as output_file:
